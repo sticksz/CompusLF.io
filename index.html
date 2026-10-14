@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f2">
+  <meta name="description" content="A simple campus lost-and-found board to help reunite students with the things they lose.">
+  <title>Campus Keeps — Lost &amp; Found</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Load the data layer before page templates and interaction handlers. -->
+  <script src="data.js" defer></script>
+  <script src="views.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="notice-bar"><span class="notice-dot"></span> A kinder way to find what’s missing <span class="notice-divider">·</span> Your contact details stay private</div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Campus Keeps home">
+      <span class="brand-mark" aria-hidden="true">ck</span>
+      <span>campus<span class="brand-light">keeps</span><small>LOST &amp; FOUND</small></span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <a href="#home" data-nav="home">Home</a>
+      <a href="#browse" data-nav="browse">Browse items</a>
+      <a href="#safety" data-nav="safety">Safety tips</a>
+      <a href="#about" data-nav="about">About</a>
+    </nav>
+    <div class="header-actions">
+      <a class="button button-quiet" href="#report-lost">I lost something</a>
+      <a class="button button-dark" href="#report-found">I found something <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1"></main>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <a class="brand brand-footer" href="#home"><span class="brand-mark" aria-hidden="true">ck</span><span>campus<span class="brand-light">keeps</span><small>LOST &amp; FOUND</small></span></a>
+      <p>Little things have a way of finding their way home.</p>
+      <nav aria-label="Footer navigation"><a href="#safety">Stay safe</a><a href="#contact">Contact</a><a href="#about">About this project</a></nav>
+    </div>
+    <div class="footer-bottom"><span>Made for campus, with care.</span><span>Local demo · Reports stay in this browser</span></div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
